@@ -547,8 +547,107 @@ class PlacesAutocomplete extends StatelessWidget {
               key: key,
             ),
           ),
+<<<<<<< Updated upstream
         ),
       ),
+=======
+      viewConstraints: viewConstraints ?? const BoxConstraints(maxHeight: 300),
+      barElevation: barElevation ?? MaterialStateProperty.all(1),
+      viewElevation: viewElevation ?? 220,
+      barHintText: searchHintText,
+      onTap: onTap,
+      barBackgroundColor: barBackgroundColor,
+      barHintStyle: barHintStyle,
+      barLeading: barLeading,
+      barOverlayColor: barOverlayColor,
+      barPadding: barPadding,
+      barSide: barSide,
+      barTextStyle: barTextStyle,
+      barTrailing: barTrailing,
+      constraints: constraints,
+      dividerColor: dividerColor,
+      viewBackgroundColor: viewBackgroundColor,
+      viewHeaderHintStyle: headerHintStyle,
+      viewHeaderTextStyle: headerTextStyle,
+      viewHintText: viewHintText,
+      viewLeading: viewLeading,
+      viewShape: viewShape,
+      viewSide: viewSide,
+      viewTrailing: viewTrailing,
+      suggestionsBuilder: suggestionsBuilder ??
+          (context, controller) {
+            final searchFuture = autoCompleteState.search(
+              controller.text,
+              apiKey,
+              language: language,
+              sessionToken: sessionToken,
+              region: region,
+              components: components,
+              location: location,
+              offset: offset,
+              origin: origin,
+              radius: radius,
+              strictbounds: strictbounds,
+              types: types,
+            );
+            return [
+              FutureBuilder(
+                future: searchFuture,
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.done) {
+                    final List<Prediction>? predictions = snapshot.data;
+                    if (predictions == null) {
+                      return const Text("No results found");
+                    }
+                    return listBuilder?.call(context, predictions) ??
+                        ListView.separated(
+                          separatorBuilder: (context, index) => Divider(
+<<<<<<< Updated upstream
+                            height: 0,
+                            color: Colors.black12,
+=======
+                            color: dividerColor,
+>>>>>>> Stashed changes
+                          ),
+                          shrinkWrap: true,
+                          physics: const NeverScrollableScrollPhysics(),
+                          itemCount: predictions.length,
+                          itemBuilder: (BuildContext context, int index) {
+                            final Prediction prediction = predictions[index];
+                            return ListTile(
+                              minVerticalPadding: 0,
+<<<<<<< Updated upstream
+                              contentPadding: EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+=======
+                              contentPadding: EdgeInsets.symmetric(horizontal: 10),
+>>>>>>> Stashed changes
+                              onTap: () {
+                                _getDetailsByPlaceId(
+                                  prediction.placeId ?? "",
+                                  context,
+                                );
+                                onSuggestionSelected?.call(prediction);
+                                controller.text = prediction.description ?? "";
+                                FocusScope.of(context).unfocus();
+                              },
+                              title: Padding(
+                                padding: searchListCardPadding,
+                                child: Text(
+                                    prediction.description ?? prediction.structuredFormatting?.mainText ?? "No title"),
+                              ),
+                            );
+                          },
+                        );
+                  }
+                  return const LinearProgressIndicator(
+                    color: Colors.amber,
+                    backgroundColor: Colors.amber,
+                  );
+                },
+              ),
+            ];
+          },
+>>>>>>> Stashed changes
     );
   }
 

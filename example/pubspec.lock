@@ -405,6 +405,39 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.8.1"
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+=======
+    version: "4.9.0"
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+  leak_tracker:
+    dependency: transitive
+    description:
+      name: leak_tracker
+      sha256: "7f0df31977cb2c0b88585095d168e689669a2cc9b97c309665e3386f3e9d341a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "10.0.4"
+  leak_tracker_flutter_testing:
+    dependency: transitive
+    description:
+      name: leak_tracker_flutter_testing
+      sha256: "06e98f569d004c1315b991ded39924b21af84cf14cc94791b8aea337d25b57f8"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.3"
+  leak_tracker_testing:
+    dependency: transitive
+    description:
+      name: leak_tracker_testing
+      sha256: "6ba465d5d76e67ddf503e1161d1f4a6bc42306f9d66ca1e8f079a47290fb06d3"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.1"
+>>>>>>> Stashed changes
   lints:
     dependency: transitive
     description:
@@ -459,7 +492,14 @@ packages:
       sha256: "8829d8a55c13fc0e37127c29fedf290c102f4e40ae94ada574091fe0ff96c917"
       url: "https://pub.dev"
     source: hosted
+<<<<<<< Updated upstream
     version: "1.8.3"
+=======
+    version: "1.9.0"
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
   path_parsing:
     dependency: transitive
     description:
@@ -475,7 +515,14 @@ packages:
       sha256: cb3798bef7fc021ac45b308f4b51208a152792445cce0448c9a4ba5879dd8750
       url: "https://pub.dev"
     source: hosted
+<<<<<<< Updated upstream
     version: "5.4.0"
+=======
+    version: "6.0.2"
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
   plugin_platform_interface:
     dependency: transitive
     description:
@@ -625,6 +672,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.4"
+<<<<<<< Updated upstream
+=======
+  vm_service:
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+    dependency: transitive
+    description:
+      name: vm_service
+      sha256: "3923c89304b715fb1eb6423f017651664a03bf5f4b29983627c4da791f74a4ec"
+      url: "https://pub.dev"
+    source: hosted
+    version: "14.2.1"
+sdks:
+  dart: ">=3.3.0 <4.0.0"
+  flutter: ">=3.18.0-18.0.pre.54"
+=======
+    dependency: transitive
+    description:
+      name: vm_service
+      sha256: "3923c89304b715fb1eb6423f017651664a03bf5f4b29983627c4da791f74a4ec"
+      url: "https://pub.dev"
+    source: hosted
+    version: "14.2.1"
+>>>>>>> Stashed changes
   web:
     dependency: transitive
     description:
@@ -642,5 +713,23 @@ packages:
     source: hosted
     version: "6.3.0"
 sdks:
+<<<<<<< Updated upstream
   dart: ">=3.1.0 <4.0.0"
   flutter: ">=3.10.0"
+=======
+  dart: ">=3.4.0 <4.0.0"
+  flutter: ">=3.22.0"
+>>>>>>> Stashed changes
+=======
+    dependency: transitive
+    description:
+      name: vm_service
+      sha256: "3923c89304b715fb1eb6423f017651664a03bf5f4b29983627c4da791f74a4ec"
+      url: "https://pub.dev"
+    source: hosted
+    version: "14.2.1"
+sdks:
+  dart: ">=3.3.0 <4.0.0"
+  flutter: ">=3.18.0-18.0.pre.54"
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes

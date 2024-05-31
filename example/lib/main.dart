@@ -36,11 +36,20 @@ class _MyAppState extends State<MyApp> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           PlacesAutocomplete(
+<<<<<<< Updated upstream
             searchController: _controller,
             apiKey: "YOUR_API_KEY",
             mounted: mounted,
             hideBackButton: true,
             onGetDetailsByPlaceId: (PlacesDetailsResponse? result) {
+=======
+<<<<<<< Updated upstream
+            apiKey: "AIzaSyA6vKEF9G12zSbgsJBcTxUVXvGzlnBnMJ4",
+=======
+            apiKey: " ",
+>>>>>>> Stashed changes
+            onPlacesDetailsResponse: (PlacesDetailsResponse? result) {
+>>>>>>> Stashed changes
               if (result != null) {
                 setState(() {
                   autocompletePlace = result.result.formattedAddress ?? "";
@@ -118,9 +127,26 @@ class _MyAppState extends State<MyApp> {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+                      return GoogleMapLocationPicker(
+<<<<<<< Updated upstream
+                        currentLocationButtonColor: Colors.black,
+                        currentLocationButtonbackgroundColor: Colors.white,
+                        apiKey: "AIzaSyA6vKEF9G12zSbgsJBcTxUVXvGzlnBnMJ4",
+=======
+>>>>>>> Stashed changes
                       return MapLocationPicker(
                         apiKey: "YOUR_API_KEY",
                         popOnNextButtonTaped: true,
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
+=======
+                        apiKey: "AIzaSyA6vKEF9G12zSbgsJBcTxUVXvGzlnBnMJ4",
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
                         currentLatLng: const LatLng(29.146727, 76.464895),
                         onNext: (GeocodingResult? result) {
                           if (result != null) {
